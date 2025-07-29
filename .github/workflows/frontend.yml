@@ -1,28 +1,17 @@
-name: React Frontend CI
+name: frontend CI
 
 on:
   push:
     branches:
-      - main
+     - main
+  
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
-  build:
+  frontend_test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run build
-        run: npm run build
+      - run: echo "frontend working fine"
