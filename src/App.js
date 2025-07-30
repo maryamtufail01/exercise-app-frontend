@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import api from './api';
 import Home from './Home';
-import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from 'react-router-dom';
+import { Routes, Route, Navigate, useNavigate } from 'react-router-dom';
 
 function Auth() {
   const [isSignup, setIsSignup] = useState(true);
@@ -75,13 +75,11 @@ function Auth() {
 
 function App() {
   return (
-    <Router>
       <Routes>
         <Route path="/" element={<Auth />} />
         <Route path="/home" element={<Home />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
-    </Router>
   );
 }
 
