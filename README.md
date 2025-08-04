@@ -1,71 +1,74 @@
-# Getting Started with Create React App
+# MoveMate Frontend (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+MoveMate Frontend is a **minimal React application** built to demonstrate **DevOps and full-stack deployment skills** alongside the [MoveMate Backend](https://github.com/maryamtufail01/exercise-app-backend).  
 
-## Available Scripts
+- Functionality is intentionally simple:
+  1. **User Signup**
+  2. **User Login**
+  3. **Dashboard:**  
+     *"Welcome to your Exercise Dashboard! Track your progress and stay fit"*  
+     with a **Logout button**
+- **No additional exercise features** are implemented.  
+- The purpose of this project is to **demonstrate professional cloud & DevOps practices**, not complex front-end development.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎥 Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![Watch the demo](https://img.youtube.com/vi/3gB2V_853ew/maxresdefault.jpg)](https://youtu.be/3gB2V_853ew)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🚀 Live Demo (Optional)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend:** [https://movemate.duckdns.org](https://movemate.duckdns.org)  
+- **Backend API:** [https://movemate.duckdns.org/api](https://movemate.duckdns.org/api)  
 
-### `npm run build`
+> *Live demo may be offline to save AWS free-tier credits. See demo video above instead.*
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Frontend:** React 18 (Create React App)  
+- **Backend:** [Laravel 11 + MySQL](https://github.com/maryamtufail01/exercise-app-backend)  
+- **Web Server:** Apache 2.4 (Served on Port 80/443)  
+- **Hosting:** AWS EC2 (Ubuntu 24.04, t2.micro free tier)  
+- **SSL:** Let’s Encrypt (auto-renewed via Certbot)  
+- **Domain:** DuckDNS free dynamic domain
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Professional Features
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- ✅ Built frontend with **React** and deployed via **Apache** on port 80/443  
+- ✅ **HTTPS enabled** with Let’s Encrypt  
+- ✅ **Backend API** proxied securely via Apache reverse proxy  
+- ✅ Matches **DevOps best practices** for a full-stack demo  
+- ✅ **Demo video available** for portfolio showcase
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 📂 Deployment Architecture
 
-## Learn More
+     ┌───────────────────┐
+     │   React Frontend   │  (Port 80/443, Apache)
+     └─────────┬─────────┘
+               │
+         HTTPS Reverse Proxy
+               │
+     ┌─────────▼─────────┐
+     │  Laravel Backend  │  (Port 9000, systemd)
+     └─────────┬─────────┘
+               │
+          MySQL Database
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 👤 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Maryam Tufail**  
+- GitHub: [@maryamtufail01](https://github.com/maryamtufail01)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# exercise-app-frontend
+---
